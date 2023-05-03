@@ -1,0 +1,94 @@
+* {
+    /* border: solid 1px red; */
+}
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #4d4dff;
+    height: 4rem;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .content .logo {
+    font-family: 'Caveat', cursive;
+    color: #e6e6ff;
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li a{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: #e6e6ff;
+}
+
+/* MAIN */
+main {
+    position: relative;
+    top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    gap: 1rem;
+    padding: 0 10rem;
+    background-color: beige;
+}
+
+main #aboutme {
+    grid-column: 1 / 4;
+}
+
+main figure {
+    grid-column: 4 / 6;
+    display: flex;
+    justify-content: center;
+}
+
+main figure img {
+    width: 80%;
+    height: auto;
+}
+
+main #projects {
+    grid-column: 4 / 6;
+    grid-row: 2;
+}
+
+main .project-images {
+    grid-column: 1/4;
+    grid-row: 2;
+}
+
+main .project-images figure {
+    height: 10rem;
+}
+
+main .project-images figure img{
+    height: 100%;
+    width: auto;
+}
+
