@@ -12,13 +12,16 @@
 <body>
   <header>
     <div class="content">
-      <a href="#" class="logo">Fausto Tapia</a>
+      <a href="#" class="logo desktop">Fausto Tapia</a>
+      <a href="#" class="logo tablet">FT</a>
+      <a href="#" class="logo mobile">FT</a>
       <nav>
         <ul>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="tablet-desktop"><a href="#aboutme">About Me</a></li>
+          <li class="tablet-desktop"><a href="#projects">Projects</a></li>
+          <li class="tablet-desktop"><a href="#skills">Skills</a></li>
+          <li class="tablet-desktop"><a href="./contact.html">Contact</a></li>
+          <li class="mobile"><a href="./contact.html"><i class="fa-solid fa-address-card fa-2xl"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -44,20 +47,25 @@
       </ul>
     </section>
     <div class="project-images">
-      <figure class="project-image">
+      <figure id="placeholder">
         <img src="/resources/spidey.gif" alt="">
+        <figcaption>Click on the project titles to see the description!</figcaption>
       </figure>
       <figure class="project-image">
         <img src="/resources/automation.jpg" alt="">
+        <figcaption>Website and Point-of-Sale systems tests automation scripts developped with Selenium WebDriver, Java, Cucumber and TestNG.</figcaption>
       </figure>
       <figure class="project-image">
         <img src="/resources/fatcat.jpg" alt="">
+        <figcaption>Automatic and programmable pet feeder based on a ESP32 microcontroller. The body and mechanism were designed with shaper3d and 3d printed.</figcaption>
       </figure>
       <figure class="project-image">
         <img src="/resources/recommend.png" alt="">
+        <figcaption>Excercise recommendation software written in python.</figcaption>
       </figure>
       <figure class="project-image">
         <img src="/resources/minesweeper.jpg" alt="">
+        <figcaption>Minesweeper game written in python.</figcaption>
       </figure>
     </div>
     <section id="skills">
@@ -72,7 +80,7 @@
         <img src="/resources/icons8-selenium-50.png" alt="">
         <i class="fa-brands fa-git-alt"></i>
       </div>
-      <h3>Other Skills</h3>
+      <h3 id="other-skills">Other Skills</h3>
       <div id="second-skills-container">
         <img src="/resources/icons8-autocad-48.png" alt="">
         <img src="/resources/icons8-3d-printer-50.png" alt="">

@@ -6,6 +6,8 @@ html, body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: beige;
+    /* display: flex; */
 }
 
 /* HEADER */
@@ -14,6 +16,8 @@ header {
     width: 100%;
     background-color: #4d4dff;
     height: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
 header .content {
@@ -21,7 +25,7 @@ header .content {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 20rem;
+    width: 80%;
 }
 
 header a {
@@ -47,6 +51,56 @@ header nav ul li a{
     color: #e6e6ff;
 }
 
+.mobile, .tablet{
+    display: none;
+}
+
+@media only screen and (max-width: 760px) {
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        display: flex;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+    }
+    .tablet {
+        display: none;
+    }
+    .tablet-desktop {
+        display: none;
+    }
+    main {
+        grid-template-columns: 1fr;
+    }
+    main #aboutme {
+        /* grid-row: 1; */
+        grid-column: 1 / 6;
+    }
+    /* main figure {
+        grid-row: 2;
+        grid-column: 1 / 6;
+    }
+    main #projects {
+        grid-row: 3;
+        grid-column: 1 / 6;
+    }
+    main .project-images {
+        grid-row: 4;
+        grid-column: 1 / 6;
+    } */
+}
+
 /* MAIN */
 main {
     position: relative;
@@ -55,8 +109,12 @@ main {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: minmax(100px, auto);
     gap: 1rem;
-    padding: 0 20rem;
+    padding: 0 10%;
     background-color: beige;
+}
+
+main .contact {
+    grid-column: 1 / 6;
 }
 
 main #aboutme {
@@ -70,8 +128,9 @@ main figure {
 }
 
 main figure img {
+    min-width: 10rem;
     width: 80%;
-    height: auto;
+    height: fit-content;
 }
 
 main #projects {
@@ -79,18 +138,37 @@ main #projects {
     grid-row: 2;
 }
 
+main .project {
+    font-weight: 700;
+    font-style:italic;
+    text-decoration: underline;
+}
+
+main .project {
+    cursor: pointer;
+}
+
 main .project-images {
     grid-column: 1/4;
     grid-row: 2;
 }
 
-main .project-images figure {
-    height: 10rem;
+main .project-image {
+    display: none;
 }
 
-main .project-images figure img{
-    height: 100%;
-    width: auto;
+main .project-images figure {
+    flex-flow: column;
+    align-items: center;
+}
+
+main .project-images figure img {
+    height: 10rem;
+    width: fit-content;
+}
+
+main .project-images figcaption {
+    margin-top: 1rem;
 }
 
 main #skills {
@@ -110,7 +188,12 @@ main #skills img {
 }
 
 main #skills h3 {
-    margin-bottom: 0;
+    font-weight: 70;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
 }
 
 main #skills #second-skills-container {
@@ -122,6 +205,7 @@ main #skills #second-skills-container {
     padding: 1rem;
     border-radius: 1.5rem;
     margin-top: 0;
+    display: none;
 }
 
 footer {
@@ -143,6 +227,16 @@ footer h4 {
     margin-top: 0.7rem;
 }
 
-/* .project-images .project-image {
-    display: none;
-} */
+main .contact .contact-links {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+main .contact .contact-links a {
+    color: black;
+}
+
+main .contact .contact-links .link {
+    padding: 1rem;
+}
